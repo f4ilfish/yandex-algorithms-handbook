@@ -24,6 +24,12 @@ for j in range(1, m + 1):
 
 for i in range(1, n + 1):
     for j in range(1, m + 1):
+
+        # По условию задачи можем взять:
+        #   1 камень либо с одной, либо с другой кучи
+        #   по 1 камню сразу из обоих кучь
+        # Анализируем ячейки в радиусе 1 шага (сверху, слева, и по диагонали слева)
+
         if (answer_matrix[j - 1][i - 1] == GameResultType.WIN
                 and answer_matrix[j - 1][i] == GameResultType.WIN
                 and answer_matrix[j][i - 1] == GameResultType.WIN):
